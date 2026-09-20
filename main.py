@@ -1,13 +1,10 @@
-class employee():
-    def __init__(self):
-        print("Employee class initialized")
-    def __del__(self):
-        print("Employee class destroyed")
-def create_object():
-    print("Creating an employee...")
-    ved = employee()
-    print("destructor called.")
-    return ved
-print("Calling create_object() function...")
-obj = create_object()
-print("Program end...")
+class pair_elements():
+    def two_sum(self,nums,target):
+        lookup = {}
+        for i, num in enumerate(nums):
+            complement = target - num
+            if complement in lookup:
+                return (lookup[complement], i)
+            lookup[num] = i
+value = int(input("Enter the target value: "))
+print("index1 = %d, index2 = %d" % pair_elements().two_sum([10,20,30,40,50,60,70], value))
